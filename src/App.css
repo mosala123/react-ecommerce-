@@ -1,55 +1,121 @@
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-}
 .App {
   display: flex;
   flex-direction: column;
-  
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Main Content */
 .main-content {
   flex: 1;
-}
-footer {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 1rem 0;
-  text-align: center;
+  padding: 20px 0;
 }
 
+/* صفحة رئيسية */
+#carouselExampleFade {
+  margin-top: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.8s ease-out;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carousel-item img {
+  transition: transform 0.5s ease-out;
+  filter: brightness(0.95);
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(102, 126, 234, 0.7);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(102, 126, 234, 1);
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #ff6b35 0%, #004e89 100%);
+  color: #ffffff;
+  padding: 3rem 0;
+  text-align: center;
+  margin-top: auto;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* الحاويات */
+.container {
+  max-width: 1200px;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b35 0%, #004e89 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Media Queries للتجاوب */
+@media (max-width: 768px) {
+  .App {
+    padding-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 2rem 0;
   }
 }

@@ -1,0 +1,156 @@
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(135deg, #ff6b35 0%, #004e89 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    padding: 0.8rem 0 !important;
+    animation: slideInDown 0.6s ease-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid rgba(247, 179, 43, 0.3);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600 !important;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #f7b32b 0%, #ff6b35 100%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(240, 147, 251, 0.25) !important;
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Cart Badge */
+.badge {
+    animation: pulse 2s infinite;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(135deg, #f7b32b 0%, #ff6b35 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Buttons في الـ Navbar */
+.btn-outline-secondary {
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease;
+    border-radius: 20px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600;
+}
+
+.btn-outline-secondary:hover {
+    background: linear-gradient(135deg, #f7b32b 0%, #ff6b35 100%) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* إضافة margin للزر العلوي */
+body {
+    padding-top: 80px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 0 !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0 !important;
+        padding: 0.5rem 0 !important;
+    }
+
+    .btn-outline-secondary {
+        margin: 0.25rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+
+    .nav-link {
+        font-size: 0.9rem !important;
+    }
+
+    .btn-outline-secondary {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+}

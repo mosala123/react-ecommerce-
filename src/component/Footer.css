@@ -1,1 +1,107 @@
- 
+footer {
+    background: linear-gradient(135deg, #ff6b35 0%, #004e89 100%);
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid rgba(247, 179, 43, 0.3);
+}
+
+footer .container {
+    max-width: 1200px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer p:hover {
+    color: #f093fb;
+    text-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+}
+
+/* إضافة أيقونات وسائل التواصل إن وجدت */
+footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #f093fb;
+    transform: translateY(-3px);
+}
+
+/* للمحتوى الإضافي في الـ footer */
+footer .footer-section {
+    margin: 1rem 0;
+    animation: fadeIn 0.8s ease-out;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+footer .footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 0;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer .footer-links {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}
