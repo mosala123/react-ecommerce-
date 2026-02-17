@@ -5,7 +5,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Productslicedetails = () => {
     const { productId } = useParams();
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     // Convert productId to integer for comparison
     const id = parseInt(productId, 10);
